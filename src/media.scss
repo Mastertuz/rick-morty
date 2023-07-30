@@ -1,0 +1,128 @@
+@media (max-width: 900px) {
+  .search {
+    width: 550px;
+    margin: 0 0 30px auto;
+  }
+}
+@media (max-width: 810px) {
+  .search {
+    width: 550px;
+    margin: 0 0 30px auto;
+  }
+  .content {
+    &__items {
+      justify-content: center;
+
+    }
+  }
+  .cardDetails{
+    &-img{
+        min-width: 250px;
+    }
+    &__img-box{
+        margin-right: 50px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .header {
+    &__title {
+      font-size: 30px;
+    }
+  }
+  .main {
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+  .search {
+    width: 350px;
+    margin: 0 auto 30px;
+  }
+  .content{
+    &__items{
+        margin-left: 0;
+    }
+  }
+  .filters {
+    transform: translateX(-200%);
+    display: none;
+    &__reset{
+        text-align: center;
+    }
+    &__inner {
+      width: 100%;
+      height: calc(100vh - 95px);
+      overflow-y: scroll;
+    }
+      &__inner::-webkit-scrollbar {
+        display: block;
+        width: 5px;
+        height: 20px;
+      }
+      &__inner::-webkit-scrollbar-thumb {
+        width: 6px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #000;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+  }
+  .filters.show {
+    transform: translateX(0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 66px;
+    width: 100%;
+    z-index: 2;
+    display: block;
+  }
+  .filterOpener {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    left: 10px;
+    position: absolute;
+    top: 22px;
+    z-index: 5;
+  }
+   .cardDetails{
+    &__inner{
+        flex-direction: column;
+    }
+    &__status{
+        margin-bottom: 20px;
+    }
+    &__btn{
+        position: absolute;
+        top: 80px;
+      }
+    &-img{
+        min-width: 200px;
+    }
+    &__img-box{
+        margin-right: 20px;
+    }
+    &__name{
+        font-size: 26px;
+    }
+   }
+}
+@media (max-width:400px) {
+    .header{
+        &__title{
+            font-size: 22px;
+        }
+    }
+    .main{
+        &__title{
+            font-size: 30px;
+        }
+    }
+.search{
+    width: 280px;
+}
+}

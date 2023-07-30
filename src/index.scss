@@ -1,0 +1,251 @@
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #9288f8;
+  &__inner {
+    padding: 15px 0;
+  }
+  &__title {
+    color: #181818;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+.main {
+  margin: 60px auto;
+  &__title {
+    color: #181818;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.overflow{
+  overflow: hidden;
+}
+.search {
+  width: 800px;
+  margin: 0 auto 50px;
+  &__input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #8062d6;
+    height: 70px;
+    border-radius: 40px;
+    border: 2px solid #181818;
+    &::placeholder {
+      font-size: 20px;
+      font-weight: 500;
+      color: #8062d6;
+    }
+  }
+}
+
+.content {
+  &__inner {
+    display: flex;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 30px;
+  }
+  &__item {
+    width: 250px;
+    max-height: 380px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid #8062d6;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out,
+      -webkit-transform 0.2s ease-in-out;
+    &:hover {
+      box-shadow: 0 6px 14px 7px #9288f8;
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  &__item-img {
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  &__item-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #331d2c;
+    padding: 0 10px;
+    margin-bottom: 5px;
+  }
+  &__item-gender {
+    padding: 0 10px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+.status-badge {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  background-color: #9288f8;
+  color: #f6f4eb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  &.cardDetails__status{
+    position: static;
+  }
+  &.dead {
+    background-color: red;
+  }
+  &.alive {
+    background-color: green;
+  }
+  &.unknown {
+    background-color: gray;
+  }
+}
+.filters {
+  &__reset {
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9288f8;
+  }
+  &__inner {
+    width: 200px;
+    background-color: #ac91f8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    .filters__item + .filters__item {
+      margin-top: 15px;
+    }
+  }
+  &__item {
+    padding: 5px 10px;
+    display: flex;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    .filters__item-box + .filters__item-box {
+      margin-top: 15px;
+    }
+  }
+  &__item-name {
+    font-size: 16px;
+    color: #181818;
+    padding: 5px 10px;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+  }
+  &__item-input:checked + label{
+    border: 2px solid #181818;
+    color: #9288f8;
+  }
+  &__item-box {
+    border-radius: 8px;
+    background-color: #fff;
+    display: inline-block;
+  }
+  &__item-title {
+    font-size: 20px;
+    color: #181818;
+    font-weight: 500;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #181818;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__item.active {
+    .pagination__num {
+      background-color: #ac91f8;
+      color: #fff;
+    }
+  }
+  li + li {
+    margin-left: 10px;
+  }
+  &__btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #ac91f8;
+    cursor: pointer;
+
+    &.pagination__num {
+      color: #ac91f8;
+      background-color: #fff;
+      border: 1px solid #ac91f8;
+    }
+  }
+}
+
+.go-top{
+  position: fixed;
+  right: 15px;
+  bottom: 100px;
+  color: #9288f8;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 40px;
+}
+
+.cardDetails{
+  &__btn{
+    position: absolute;
+    top: 100px;
+    color: #9288f8;
+  }
+  &__inner{
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  &__img-box{
+   text-align: center;
+   margin-right: 100px;
+  }
+  &__name{
+   font-size: 36px;
+   font-weight: 500;
+   margin-bottom: 50px;
+  }
+  &-img{
+   margin-bottom: 10px;
+  }
+  &__info{
+   p+p{
+    margin-top: 20px;
+   }
+  }
+}
+.filterOpener{
+  display: none;
+}
+.footer{
+  text-align: center;
+  &__link{
+    display: inline-block;
+    padding: 20px 0;
+  }
+}
+@import "./media.scss";
